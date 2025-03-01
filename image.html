@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery">
+    <img src="https://tse2.mm.bing.net/th?id=OIP.5PI7xI0Q9YIbX4g-10s4YQHaEK&pid=Api&P=0&h=180" alt="Image 1">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.yGABvaCDR67-irLqZZI_SwHaE7&pid=Api&P=0&h=180" alt="Image 2">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.ANNjdRsnAba-BOc9VEaUPwHaE8&pid=Api&P=0&h=180" alt="Image 3">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.JyL4HI60ANsWPLIe4EKWBwHaEK&pid=Api&P=0&h=180" alt="Image 4">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.8pXUCyd8f-yidA6Pd8muWgHaEK&pid=Api&P=0&h=180" alt="Image 5">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.mwcOLnieTPd-WEqtm1dPpwHaEK&pid=Api&P=0&h=180" alt="Image 6">
+</div>
+
+</body>
+</html>
